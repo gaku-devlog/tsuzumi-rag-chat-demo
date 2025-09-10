@@ -1,0 +1,19 @@
+{
+    "name": "tsuzumi RAG Chat Demo",
+    "build": {
+        "dockerfile": "../Dockerfile.dev"
+    },
+    "appPort": ["8501:8501"], 
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python"
+            },
+            "extensions": [
+                "ms-python.debugpy",
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    }
+}

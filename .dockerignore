@@ -1,0 +1,27 @@
+# Python キャッシュ
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 仮想環境関連
+.env
+.venv/
+env/
+venv/
+
+# 開発用・不要な生成物
+vector_store/
+.vscode/
+*.log
+
+# 不要な依存管理ファイル
+requirements-dev.txt
+requirements.in
+
+# その他不要ファイル
+.git
+.gitignore
+Dockerfile
+LICENSE
+README.md
