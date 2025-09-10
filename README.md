@@ -11,6 +11,7 @@ Azure AI Foundry を通じて国産 LLM モデル tsuzumi を利用し、Streaml
 - 国産 LLM モデル tsuzumi を活用したアプリケーション開発を実践すること  
 - RAG（Retrieval-Augmented Generation）の仕組みを理解すること  
 - Docker や Azure Container Apps を用いて、クラウド環境でのアプリ構築経験を積むこと
+- GitHub Actions を利用した **CI/CD パイプラインの構築と自動デプロイ** を実践すること  
 
 
 ## Features（機能）
@@ -20,7 +21,8 @@ Azure AI Foundry を通じて国産 LLM モデル tsuzumi を利用し、Streaml
 - **FAISS を利用したベクトル検索**（類似度スコア閾値や検索件数を UI 側から調整可能）  
 - **PDF / テキストデータのアップロード機能** に対応し、任意のドキュメントを検索対象に追加可能  
 - **会話履歴数の制限機能** により、情報量とトークン使用量のバランスを調整  
-- **Docker による環境構築**と **Azure Container Apps へのデプロイ**を想定した設計  
+- **Docker による環境構築**と **Azure Container Apps へのデプロイ済み**  
+- **GitHub Actions による CI/CD パイプライン**（push → 自動ビルド & デプロイ）   
 - **API 設定（エンドポイント・APIキー）の手動入力**とし、第三者が勝手にモデルを利用できないように工夫  
 - **Streamlit ベースのシンプルな UI** により、ブラウザ上で直感的に利用可能
 
@@ -61,6 +63,26 @@ Azure AI Foundry を通じて国産 LLM モデル tsuzumi を利用し、Streaml
 - 類似度スコアの閾値を調整可能  
 - 検索件数（k値）を変更可能  
 - 会話履歴数の上限を設定可能（情報量とトークン使用量のバランスを調整）
+
+
+## Deployment（デプロイ）
+
+本アプリケーションは **Azure Container Apps** 上にデプロイ済みです。  
+GitHub Actions を用いて CI/CD パイプラインを構築し、`main` ブランチへの push をトリガーに自動でデプロイされるようにしています。  
+
+- **デプロイ先**: Azure Container Apps  
+- **レジストリ**: Azure Container Registry (ACR)  
+- **スケーリング**: 最小インスタンス = 0、最大インスタンス = 1（コスト最適化）  
+- **CI/CD**: GitHub Actions により Docker build → ACR push → Container Apps update  
+
+### アクセス URL
+👉 [tsuzumi RAG Chat App](https://tsuzumi-rag-chat.icymeadow-a10cc88a.eastus2.azurecontainerapps.io)
+
+※ 利用には API エンドポイント・APIキーの入力が必要です  
+※ 初回アクセス時はスリープからの起動で数秒待機が発生する場合があります  
+
+### CI/CD ステータス
+![Build and Deploy](https://github.com/gaku-devlog/tsuzumi-rag-chat-demo/actions/workflows/deploy.yml/badge.svg)
 
 
 ## Project Structure（プロジェクト構成）
