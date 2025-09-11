@@ -11,7 +11,7 @@ Azure AI Foundry を通じて国産 LLM モデル tsuzumi を利用し、Streaml
 - 国産 LLM モデル tsuzumi を活用したアプリケーション開発を実践すること  
 - RAG（Retrieval-Augmented Generation）の仕組みを理解すること  
 - Docker や Azure Container Apps を用いて、クラウド環境でのアプリ構築経験を積むこと
-- GitHub Actions を利用した **CI/CD パイプラインの構築と自動デプロイ** を実践すること  
+- GitHub Actions を利用した CI/CD パイプラインの構築と自動デプロイを実践すること  
 
 
 ## Features（機能）
@@ -76,7 +76,7 @@ GitHub Actions を用いて CI/CD パイプラインを構築し、`main` ブラ
 - **CI/CD**: GitHub Actions により Docker build → ACR push → Container Apps update  
 
 ### アクセス URL
-👉 [tsuzumi RAG Chat App](https://tsuzumi-rag-chat.icymeadow-a10cc88a.eastus2.azurecontainerapps.io)
+👉 [tsuzumi RAG Chat Demo](https://tsuzumi-rag-chat.icymeadow-a10cc88a.eastus2.azurecontainerapps.io)
 
 ※ 利用には API エンドポイント・APIキーの入力が必要です  
 ※ 初回アクセス時はスリープからの起動で数秒待機が発生する場合があります  
@@ -113,14 +113,15 @@ GitHub Actions を用いて CI/CD パイプラインを構築し、`main` ブラ
 
 ## Notes（補足）
 
-参考：Udemy 講座「Azure OpenAI Service で作る Chat アプリ」
+参考：Udemy 講座「Azureで作るOpenAIチャットシステム開発」
 
 ただし、以下の点については独自に拡張・変更を行っています：
 - **国産 LLM モデル tsuzumi** を利用（Azure AI Foundry）  
-- **Docker を利用した環境構築**  
-- **Azure Container Apps へのデプロイ**（予定）  
-- **API 設定（エンドポイント・APIキー）の手動入力** によるセキュリティ対策  
-- **例外処理の追加**（ベクトルDBが存在しない場合のエラーメッセージ表示 など）  
+- **Azure Container Apps へのデプロイ** 
+- **API 設定（エンドポイント・APIキー）の手動入力** によるセキュリティ対策
+- ベクトル検索における**類似度スコア閾値や検索件数の調整機能**
+- **例外処理の追加**（ベクトルDBが存在しない場合のエラーメッセージ表示 など）
+- **GitHub Actions を利用した CI/CD パイプラインの構築**
 etc...
 
 
