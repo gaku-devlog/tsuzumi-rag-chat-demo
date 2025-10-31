@@ -35,7 +35,7 @@ Azure AI Foundry を通じて国産 LLM モデル tsuzumi を利用し、Streaml
 - **FAISS** : ベクトル検索エンジン（RAG の検索部分を実装）  
 - **LangChain** : LLM とベクトル検索を統合するフレームワーク  
 - **Docker** : 開発環境のコンテナ化  
-- **Azure Container Apps（予定）** : デプロイ先として利用予定
+- **Azure Container Apps** : デプロイ先として利用予定
 
 
 ## Screenshots / Demo（画面キャプチャ）
