@@ -68,7 +68,7 @@ Azure AI Foundry を通じて国産 LLM モデル tsuzumi を利用し、Streaml
 ## Deployment（デプロイ）
 
 ~~本アプリケーションは **Azure Container Apps** 上にデプロイ済みです。~~  
-~~GitHub Actions を用いて CI/CD パイプラインを構築し、`main` ブランチへの push をトリガーに自動でデプロイされるようにしています。 ~~ 
+~~GitHub Actions を用いて CI/CD パイプラインを構築し、`main` ブランチへの push をトリガーに自動でデプロイされるようにしています。~~ 
 
 [2026/5/6 追記]
 現在、運用コスト管理のためクラウド上のデプロイ環境は停止・削除済みです。
