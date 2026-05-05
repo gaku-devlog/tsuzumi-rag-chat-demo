@@ -23,3 +23,7 @@ db/
 # 開発専用の依存ファイル
 requirements-dev.txt
 requirements.in
+
+# その他
+memo.txt
+backup/deploy.yml.backup
